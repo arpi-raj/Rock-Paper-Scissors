@@ -1,0 +1,65 @@
+.rock,
+.paper,
+.scissor {
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 60px;
+  height: 120px;
+  width: 120px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.reset {
+  display: flex;
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+  font-size: x-small;
+  padding: 5px;
+  margin: auto;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Ariel;
+}
+
+.rockimg,
+.paperimg,
+.scissorimg {
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  transition: 1s;
+}
+
+.para {
+  font-size: 37px;
+  text-align: center;
+}
+
+.res,
+.moves,
+.score {
+  font-size: 26px;
+}
+
+.contents {
+  align-items: center;
+  text-align: center;
+}
+
+.moves {
+  justify-content: center;
+  margin-bottom: 15px;
+  vertical-align: auto;
+}
+
+.n {
+  margin-right: 15px;
+  width: 80px;
+  height: 80px;
+}
