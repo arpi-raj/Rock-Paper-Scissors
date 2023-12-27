@@ -94,3 +94,51 @@ function reset() {
   document.querySelector(".res").innerHTML = "";
   alert("All scores reset to 0");
 }
+
+let isAutoPlay = false;
+let id;
+let autoPlayButton = document.querySelector(".autoPlay");
+
+function autoPlay() {
+  if (isAutoPlay === true) {
+    clearInterval(id);
+    autoPlayButton.innerHTML = "Auto Play";
+    isAutoPlay = false;
+  } else {
+    id = setInterval(function () {
+      isAutoPlay = true;
+      const pMove = pickCMove();
+      playGame(pMove);
+      isAutoPlay = true;
+      autoPlayButton.innerHTML = "Auto Playing";
+    }, 1000);
+  }
+}
+
+let body = document.querySelector(".body");
+let rockButton = document.querySelector(".rock");
+let paperButton = document.querySelector(".paper");
+let scissorButton = document.querySelector(".scissor");
+
+document.addEventListener("keydown", (event) => {
+  console.log(event.key);
+  if (event.key === "r") {
+    playGame("rock");
+  } else if (event.key === "p") {
+    playGame("paper");
+  } else if (event.key === "s") {
+    playGame("scissor");
+  }
+});
+
+rockButton.addEventListener("click", () => {
+  playGame("rock");
+});
+
+paperButton.addEventListener("click", () => {
+  playGame("paper");
+});
+
+scissorButton.addEventListener("click", () => {
+  playGame("scissor");
+});
