@@ -59,9 +59,10 @@ body {
 }
 
 .moves {
-  justify-content: center;
-  margin-bottom: 15px;
-  vertical-align: auto;
+  display: flex;
+  justify-content: center; /*horizontal alignment*/
+  align-items: center; /* Vertical alignment */
+  padding: 10px;
 }
 
 .n {
